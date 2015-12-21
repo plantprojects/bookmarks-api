@@ -1,11 +1,14 @@
-# Bookmark [/bookmark]
+# Group Bookmarks
+Group of all bookmark-related resources.
 
-## Retrieve a Bookmark [GET]
+## Bookmark [/bookmark]
+
+### Retrieve a Bookmark [GET]
 + Response 200 (text/plain)
 
         Hello World!
 
-## Update a Bookmark [PUT]
+### Update a Bookmark [PUT]
 + Request (text/plain)
 
         This is the bookmark
