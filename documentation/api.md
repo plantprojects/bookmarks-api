@@ -21,10 +21,13 @@ Retrieves a bookmark with the given ID.
 
 
 ### Update a Bookmark [PUT]
+Updates an existing bookmark
 
 + Request Update JSON Message (application/json)
 
-+ Response 204
++ Response 204 (application/json)
+
+    +Attributes (Bookmark)
 
 
 ### Create a Bookmark [POST]
@@ -37,12 +40,12 @@ Creates a new Bookmark
 + Response 200 (application/json)
 
     + Attributes (Bookmark)
-    
+
 
 ## All My Bookmarks [/bookmarks{?limit}]
 A resource representing all of my bookmarks in the system
 
-+ Attributes (array[coupon])
++ Attributes (array[bookmark])
 
 ### List all Bookmarks [GET]
 Returns a list of all your bookmarks
