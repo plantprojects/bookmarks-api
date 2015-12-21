@@ -18,14 +18,14 @@ Group of all bookmark-related resources.
 
     + Body
 
-        {
-            "id": 1,
-            "title": "PXL Bros",
-            "url": "http://pxlbros.com",
-            "thumbnail": "/assets/images/pxlbros.jpg",
-            "description": "PXL BROS is a full-service digital agency specializing in web, mobile, social media, and application development.",
-            "categories": [0, 2, 3]
-        }
+            {
+                "id": 1,
+                "title": "PXL Bros",
+                "url": "http://pxlbros.com",
+                "thumbnail": "/assets/images/pxlbros.jpg",
+                "description": "PXL BROS is a full-service digital agency specializing in web, mobile, social media, and application development.",
+                "categories": [0, 2, 3]
+            }
 
 
 ### Update a Bookmark [PUT]
