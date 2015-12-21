@@ -14,3 +14,9 @@ Group of all bookmark-related resources.
         This is the bookmark
 
 + Response 204
+
+# Group Users
+Group of all user-related resources
+
+# Group Categories
+Group of all category-related resources
