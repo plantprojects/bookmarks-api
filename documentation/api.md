@@ -30,13 +30,14 @@ Retrieves a bookmark with the given ID.
 ### Create a Bookmark [POST]
 Creates a new Bookmark
 
-+ Attributes (object)
++ Attributes (Bookmark Base)
 
-    + title: PXL Bros (string)
-    + url: `http://pxlbros.com` (string, required)
-    + thumbnail: /assets/images/pxlbros.jpg (image)
-    + description: PXL BROS is a full-service digital agency... (string)
-    + categories: `[0, 2, 3]` (object)
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Attributes (Bookmark)
+    
 
 ## All My Bookmarks [/bookmarks{?limit}]
 A resource representing all of my bookmarks in the system
