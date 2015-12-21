@@ -1,9 +1,25 @@
 # Group Bookmarks
 Group of all bookmark-related resources.
 
-## Bookmark [/bookmark]
+## Bookmark [/bookmarks/{id}]
+A Bookmark contains information about a saved link including a title, URL, description, thumbnail, and categories.
+
++ Parameters
+    + id (id)
+    The ID of the desired bookmark.
+
++ Attributes (object)
+
+    + id: 1 (id, required)
+    + title: PXL Bros (string)
+    + url: `http://pxlbros.com` (string, required)
+    + thumbnail: /assets/images/pxlbros.jpg (image)
+    + description: PXL BROS is a full-service digital agency... (string)
+    + categories: `[0, 2, 3]` (object)
 
 ### Retrieve a Bookmark [GET]
+Retrieves a bookmark with the given ID.
+
 + Request JSON Message
 
     + Headers
@@ -12,14 +28,6 @@ Group of all bookmark-related resources.
 
 + Response 200 (application/json)
 
-    + Attributes (object)
-
-        + id: 1 (id, required)
-        + title: PXL Bros (string)
-        + url: `http://pxlbros.com` (string, required)
-        + thumbnail: /assets/images/pxlbros.jpg (image)
-        + description: PXL BROS is a full-service digital agency... (string)
-        + categories: `[0, 2, 3]` (object)
 
     + Headers
 
@@ -44,6 +52,17 @@ Group of all bookmark-related resources.
         { "bookmark": "The bookmark info"}
 
 + Response 204
+
+### Create a Bookmark [POST]
+Creates a new Bookmark
+
++ Attributes (object)
+
+    + title: PXL Bros (string)
+    + url: `http://pxlbros.com` (string, required)
+    + thumbnail: /assets/images/pxlbros.jpg (image)
+    + description: PXL BROS is a full-service digital agency... (string)
+    + categories: `[0, 2, 3]` (object)
 
 ## All My Bookmarks [/bookmarks{?limit}]
 A resource representing all of my bookmarks in the system
