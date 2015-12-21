@@ -12,6 +12,15 @@ Group of all bookmark-related resources.
 
 + Response 200 (application/json)
 
+    + Attributes (object)
+
+        + id: 1 (id, required)
+        + title: PXL Bros (string)
+        + url: http://pxlbros.com (string, required)
+        + thumbnail: /assets/images/pxlbros.jpg (image)
+        + description: PXL BROS is a full-service digital agency... (string)
+        + categories: [0, 2, 3] (object)
+
     + Headers
 
             X-My-Bookmark-Header: 42
