@@ -16,10 +16,10 @@ Group of all bookmark-related resources.
 
         + id: 1 (id, required)
         + title: PXL Bros (string)
-        + url: http://pxlbros.com (string, required)
+        + url: `http://pxlbros.com` (string, required)
         + thumbnail: /assets/images/pxlbros.jpg (image)
         + description: PXL BROS is a full-service digital agency... (string)
-        + categories: [0, 2, 3] (object)
+        + categories: `[0, 2, 3]` (object)
 
     + Headers
 
