@@ -8,13 +8,13 @@ Group of all bookmark-related resources.
 
     + Headers
 
-        Accept: application/json
+            Accept: application/json
 
 + Response 200 (application/json)
 
     + Headers
 
-        X-My-Bookmark-Header: 42
+            X-My-Bookmark-Header: 42
 
     + Body
 
