@@ -39,7 +39,41 @@ Creates a new Bookmark
 
 + Response 200 (application/json)
 
-    + Attributes (Bookmark)
+    + Body
+            {
+                "id": 1,
+                "title": "This is a title",
+                "url": "`http://pxlbros.com`"
+                "description": "A description about this link."
+                "tags": [
+                    "todo",
+                    "home"
+                ]
+            }
+    + Schema
+            {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
 
 
 ## All My Bookmarks [/bookmarks{?limit}]
