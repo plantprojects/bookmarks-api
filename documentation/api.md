@@ -4,9 +4,9 @@ Group of all bookmark-related resources.
 ## Bookmark [/bookmark]
 
 ### Retrieve a Bookmark [GET]
-+ Response 200 (text/plain)
++ Response 200 (application/json)
 
-        Hello World!
+        { "bookmark": "Hello World!" }
 
 ### Update a Bookmark [PUT]
 + Request (text/plain)
