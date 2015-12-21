@@ -20,8 +20,13 @@ Group of all bookmark-related resources.
 
         {
             "id": 1,
-            "bookmark": "Hello World!"
+            "title": "PXL Bros",
+            "url": "http://pxlbros.com",
+            "thumbnail": "/assets/images/pxlbros.jpg",
+            "description": "PXL BROS is a full-service digital agency specializing in web, mobile, social media, and application development.",
+            "categories": [0, 2, 3]
         }
+
 
 ### Update a Bookmark [PUT]
 
@@ -46,15 +51,27 @@ A resource representing all of my bookmarks in the system
         [
             {
                 "id": 1,
-                "bookmark": "Hello World!"
+                "title": "PXL Bros",
+                "url": "http://pxlbros.com",
+                "thumbnail": "/assets/images/pxlbros.jpg",
+                "description": "PXL BROS is a full-service digital agency specializing in web, mobile, social media, and application development.",
+                "categories": [0, 2, 3]
             },
             {
                 "id": 2,
-                "bookmark": "The second bookmark."
+                "title": "Sarah Bostwick artwork",
+                "url": "http://sarahbostwick.com",
+                "thumbnail": "/assets/images/sarahbostwick.jpg",
+                "description": "Portfolio site of relief sculptures by Los Angeles based artist Sarah Bostwick",
+                "categories": [1]
             },
             {
-                "id": 2,
-                "bookmark": "And a third one."
+                "id": 3,
+                "title": "The Property",
+                "url": "http://theproperty.gallery",
+                "thumbnail": "/assets/images/sarahbostwick.jpg",
+                "description": "Los Angeles artist run gallery project 2014-2015",
+                "categories": [1, 2]
             }
         ]
 
