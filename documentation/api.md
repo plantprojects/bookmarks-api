@@ -2,7 +2,7 @@
 Group of all bookmark-related resources.
 
 ## Bookmark [/bookmarks{?tag}]
-Actions related to the movies as a Group
+Actions related to the bookmarks as a Group
 
 ### Get All Bookmarks [GET]
 Returns a list of all bookmarks
