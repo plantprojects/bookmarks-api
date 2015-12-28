@@ -1,10 +1,12 @@
-# Bookmarks
+FORMAT: 1A
+
+# Bookmarks REST API 1.0
 Bookmarks is an API for managing bookmark data, bookmark tags, and bookmark users.
 
 # Group Bookmarks
 Group of all bookmark-related resources.
 
-## Bookmark [/bookmarks{?tag}]
+## Bookmarks [/bookmarks{?tag}]
 Actions related to the bookmarks as a Group
 
 ### Get All Bookmarks [GET]
@@ -16,7 +18,6 @@ Returns a list of all bookmarks
 + Response 200 (application/json)
     + Attributes (Success Response)
         + data (Bookmark Collection)
-
     + Headers
 
             Location: /bookmarks
@@ -46,7 +47,7 @@ Creates a new Bookmark
 Actions related to a specific bookmark represented by ID bookmark_id.
 
 + Parameters
-    + bookmark_id: (number, required) - Unique identifier for a bookmark in the form of an integer
+    + bookmark_id (number) - Unique identifier for a bookmark in the form of an integer
 
 ### Retrieve a Bookmark [GET]
 Retrieves bookmark details for the given ID.
@@ -83,16 +84,22 @@ Deletes an existing bookmark permanently.
 # Group Tags
 Group of all tag-related resources
 
-## Tags [/tags]
+## Tag [/tags]
+Actions related to the tags as a group.
 
-### Get Tags [GET]
+### Get All Tags [GET]
+Returns a list of all tags.
 
 + Response 200 (application/json)
     + Attributes (Success Response)
-        + data (object)
-            + tags (array[Tags])
+        + data (Tag Collection)
+
+    + Headers
+
+            Location: /tags
 
 ### Create Tag [POST]
+Creates a new tag.
 
 + Request (application/json)
     + Attributes (object)
@@ -106,12 +113,14 @@ Group of all tag-related resources
 
             Location: /tags/1
 
-## Tag [/tagged/{tag_id}]
+## Tag [/tags/{tag_id}]
+Actions related to a specific tag represented by ID tag_id
 
 + Parameters
     + tag_id (number) - ID of the Tag in the form of an integer.
 
 ### Get Tag [GET]
+Gets the tag details
 
 + Response 200 (application/json)
     + Attributes (Success Response)
@@ -131,6 +140,7 @@ Updates the tag specified by {tag_id}
             + tags (array[Tag])
 
 ### Delete Tag [DELETE]
+Deletes tag permanently
 
 + Response 204
 
@@ -202,18 +212,22 @@ Deletes the relationship specified by {bookmark_tag_id}
 # Group Users
 Group of all user-related resources
 
-## Users
+## User [/users]
+Actions related to the users as a group.
 
-### Get Users [GET]
+### List All Users [GET]
+Returns a list of all users.
 
 + Response 200 (application/json)
     + Attributes (Success Response)
-        + data (object)
-            + users (array[Users])
+        + data (User Collection)
 
-+ Response 404
+    + Headers
+
+            Location: /users
 
 ### Create User [POST]
+Creates a new user.
 
 + Request (application/json)
     + Attributes (object)
@@ -222,12 +236,22 @@ Group of all user-related resources
         + avatar: filename.jpg (string)
         + created_at: 1439839581 (number) - Timestamp of when the User was created
 
++ Response 201 (application/json)
+    + Attributes (Success Response)
+        + data (object)
+            + users (array[User])
+    + Headers
+
+            Location: /users/1
+
 ## User [/users/{user_id}]
+Actions related to a specific user represented by ID user_id
 
 + Parameters
     + user_id (number) - ID of user in the form of an integer.
 
 ### Get User [GET]
+Gets the user details
 
 + Response 200 (application/json)
     + Attributes (Success Response)
@@ -245,7 +269,7 @@ Updates the user specified by {user_id}
 + Response 200 (application/json)
     + Attributes (Success Response)
         + data (object)
-            + users (array[user])
+            + users (array[User])
 
 ### Delete User [DELETE]
 Deletes user permanently
@@ -283,6 +307,13 @@ Deletes user permanently
 + id: 1 (number)
 + name: JavaScript (string)
 
+## Tag Collection (object)
++ tags (array[Tag]) - An array of tag objects
+
+## Tag Collection Response (object)
++ status: success (string)
++ data (Tag Collection)
+
 ## Bookmark Tag (object)
 + id: 8291 (number)
 + tag: 1 (number)
@@ -300,3 +331,10 @@ Deletes user permanently
 + username: sarahbostwick (string)
 + avatar: filename.jpg (string)
 + created_at: 1439839581 (number)
+
+## User Collection (object)
++ users (array[User]) - An array of user objects
+
+## User Collection Response (object)
++ status: sucess (string)
++ data (User Collection)
