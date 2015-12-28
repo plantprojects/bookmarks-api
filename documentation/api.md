@@ -134,6 +134,70 @@ Updates the tag specified by {tag_id}
 
 + Response 204
 
+# Group Bookmark Tags
+## Bookmark Tags [/bookmark-tags{?bookmark,tag}]
+
+### Get all Bookmark Tags [GET]
+Get all Bookmark Tags with filters applied
+
++ Parameters
+    + bookmark (number, optional) - Id of the Bookmark the bookmark tag relationships will be returned for.
+    + tag (number, optional) - Id of the Tag the bookmark tag relationships will be returned for.
+
++ Response 200 (application/json)
+    + Attributes (Success Response)
+        + data (object)
+            + bookmark_tags (array[Bookmark Tag])
+
+### Create Bookmark Tag relationship [POST]
+Create a new Bookmark Tag relationship
+
++ Request (application/json)
+    + Attributes (object)
+        + bookmark: 1 (number)
+        + movie: 1 (number)
+
++ Response 201 (application/json)
+    + Attributes(Success Response)
+        + data (object)
+            + bookmark_tags (array[Bookmark Tag])
+    + Headers
+
+            Location: /bookmark-tags/9843
+
+## Bookmark Tag Relationship [/bookmark-tags/{bookmark_tag_id}]
+
++ Parameters
+    + bookmark_tag_id (number) - ID of the Bookmark Tag Relationship in the form of an integer
+
+### Get Relationship [GET]
+Returns the Relationship specified by {bookmark_tag_id}
+
++ Response 200 (application/json)
+    + Attributes (Success Response)
+        + data (object)
+            + bookmark_tags (array[Bookmark Tag])
+
++ Response 404 (application/json)
+    + Attributes (Not Found Response)
+
+### Update Relationship [PUT]
+Updates the relationship specified by {bookmark_tag_id}
+
++ Request (application/json)
+    + Attributes (object)
+        + bookmark: 1 (number)
+        + tag: 2 (number)
++ Response 200 (application/json)
+    + Attributes (Success Response)
+        + data (object)
+            + bookmark_tag (array[Bookmark Tag])
+
+### Delete Relationship [DELETE]
+Deletes the relationship specified by {bookmark_tag_id}
+
++ Response 204
+
 
 # Group Users
 Group of all user-related resources
@@ -236,15 +300,3 @@ Deletes user permanently
 + username: sarahbostwick (string)
 + avatar: filename.jpg (string)
 + created_at: 1439839581 (number)
-
-## Bookmark User (object)
-+ id: 436 (number)
-+ user: 1 (number)
-+ bookmark: 55 (number)
-+ links (array)
-    + link (object)
-        + rel: user (string)
-        + href: /users/1 (string)
-    + link (object)
-        + rel: bookmark (string)
-        + href: /bookmarks/55 (string)
