@@ -28,7 +28,7 @@ Creates a new Bookmark
     + Attributes (object, required)
         + id: 1 (number, required)
         + title: PXL Bros (string)
-        + url: pxlbros.com (string, required)
+        + url: `http://pxlbros.com` (string, required)
         + thumbnail: filename.jpg (string)
         + description: PXL BROS is a full-service digital agency... (string)
         + tags: `[0, 2, 3]` (object)
