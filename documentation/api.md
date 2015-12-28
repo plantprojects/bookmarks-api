@@ -1,3 +1,6 @@
+# Bookmarks
+Bookmarks is an API for managing bookmark data, bookmark tags, and bookmark users.
+
 # Group Bookmarks
 Group of all bookmark-related resources.
 
