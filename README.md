@@ -1,4 +1,4 @@
-# bookmarks-api
+# bookmarks-api ![bookmarks logo](https://github.com/plantprojects/bookmarks-api/blob/master/project-icon.png)
 An API for managing bookmark data (link, image, tags, user), bookmark tags, and bookmark users.
 
 ## API Blueprint
