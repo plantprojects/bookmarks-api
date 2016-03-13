@@ -2,8 +2,7 @@
 Bookmarks API is a JSON formatted RESTful API for managing URL bookmark data.
 
 ### Stack
-Node, Express, MongoDB
-
+Node, Express, MongoDB  
 Hosted on Heroku with mLab MongoDB
 
 ### JSON API Format
