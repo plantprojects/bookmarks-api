@@ -9,4 +9,5 @@ Hosted on Heroku with mLab MongoDB
 [http://jsonapi.org/](http://jsonapi.org/)
 
 #### API Blueprint
+Documentation/blueprint for creating the Bookmarks API  
 [http://plantprojects.github.io/bookmarks-api](http://plantprojects.github.io/bookmarks-api)
